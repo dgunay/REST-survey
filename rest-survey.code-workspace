@@ -1,0 +1,14 @@
+{
+  "folders": [
+    { "path": "rust/actix-web-rustorm" },
+    { "path": ".", "name": "root" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "rust": true,
+      "go": true,
+      "python": true,
+      "typescript": true
+    }
+  }
+}
