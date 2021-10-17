@@ -2,6 +2,7 @@ name: rust-actix-web-rustorm
 
 on:
   push:
+    branches: [ $default_branch ]
   pull_request:
 
 env:
