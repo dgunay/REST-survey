@@ -34,3 +34,11 @@ but comes up a lot when developing REST APIs so I wanted to survey that too.
 
 - Is it statically typed?
 - Does the type system prevent classes of errors?
+
+### Documentation
+
+- Does it support doctests?
+- Does it let me generate OpenAPI specifications from the code without having to
+  manually specific things like errors and responses?
+- Is it able to serve live documentation for the routes?
+- Is it able to dump that documentation to a static site?
