@@ -1,0 +1,31 @@
+name: rust-actix-web-rustorm
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+    - name: Run e2e tests
+      run: |
+        cd rust/actix-web-rustorm
+        cargo build
+        cargo run &
+        cd ../../test
+        npm add -g yarn
+        yarn && yarn test
+
