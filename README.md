@@ -7,6 +7,11 @@ of them as possible.
 Some of this isn't strictly relevant, such as the choice of database provider,
 but comes up a lot when developing REST APIs so I wanted to survey that too.
 
+I would also ideally like to benchmark it, but I want to be certain I'm being
+fair to each combination of language/framework and using them correctly and
+performantly. Arguably I could consider the ease of producing a performant
+service part of their worth.
+
 ## Problems
 
 ### Database
