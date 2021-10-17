@@ -14,6 +14,7 @@ but comes up a lot when developing REST APIs so I wanted to survey that too.
 - Does it have convenient integration with many different DB providers?
 - Does it support polymorphic has-many relations?
 - Does it have convenient propagation of updates/deletions across relations?
+- Does it easily support soft deletes?
 
 ### Data transfer/DTOs
 
@@ -42,3 +43,22 @@ but comes up a lot when developing REST APIs so I wanted to survey that too.
   manually specific things like errors and responses?
 - Is it able to serve live documentation for the routes?
 - Is it able to dump that documentation to a static site?
+
+## Design
+
+This kind of entity design should (hopefully) exercise all the problems we're
+after.
+
+Foo:
+  - has some metadata (created, updated, deleted) as an entity but not as a DTO
+  - has some uniform string data members
+  - has many Bars
+
+Bar:
+  - owned by at most one Foo
+  - has some uniform string data members
+  - may have 1 Baz
+
+Baz:
+  - Can be shaped like potentially anything
+  - No relations
