@@ -9,3 +9,4 @@
 
 - Diesel
 - sqlx
+- rustorm
